@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import NewsCard from './NewsCard';
+import WeatherCard from './WeatherCards';
 import WeatherTable from './WeatherTable';
 
-const WEATHER_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-const NEWS_KEY = process.env.REACT_APP_NEWS_API_KEY;
+const WEATHER_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+const NEWS_KEY = import.meta.env.VITE_NEWS_API_KEY;
 const geocodingUrl = "http://api.openweathermap.org/geo/1.0/direct?q=";
 const weatherUrl = "https://api.openweathermap.org/data/2.5/weather?";
 const hourUrl = "https://pro.openweathermap.org/data/2.5/forecast/hourly?";
